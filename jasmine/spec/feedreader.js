@@ -30,23 +30,42 @@ $(function() {
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
-         */
+         
+        it('feed has URL defined and URL is not empty', function(){
+            for (var x = 0; x<= allFeeds.length; x++){
+                expect(allFeeds[x].url).toBeDefined();
+                expect(allFeeds[x].url).not.toContain("");
+            }
+         }); */
 
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
-         */
+         
+        it('feed has name defined and name is not empty', function(){
+            for (var x = 0; x<= allFeeds.length; x++){
+                expect(allFeeds[x].name).toBeDefined();
+                expect(allFeeds[x].name).not.toContain("");
+            }
+         }); */
+         
     });
-
 
     /* TODO: Write a new test suite named "The menu" */
 
+    describe('The menu', function(){
+    
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+
+
+        it('menu element is hidden by default', function(){
+            expect(element('.menu-hidden').count()).toEqual(1);
+        });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
@@ -54,7 +73,16 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
+
+        it('menu changes visibility, when menu icon is clicked', function(){
+            
+        });
+
+    });
+
     /* TODO: Write a new test suite named "Initial Entries" */
+
+    describe('Initial Entries', function(){
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -63,10 +91,27 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
-    /* TODO: Write a new test suite named "New Feed Selection"
+
+        it('function loadFeed() is called and completed work', function(){
+            expect(loadFeed).toHaveBeenCalled();
+            expect(element('.entry').count()).toEqual(1);
+        });
+
+    });
+
+    /* TODO: Write a new test suite named "New Feed Selection" */
+    describe('New Feed Selection', function(){
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+
+
+        it('new feed is loaded by loadFeed() function and content changes', function(){
+
+        });
+
+    });
+
 }());
