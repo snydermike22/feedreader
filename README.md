@@ -1,3 +1,5 @@
+Coding changes made due to Udacity Reviewer Comments
+
 Things that needed to be done to accomplish P6
 
 # How will I complete this project?
