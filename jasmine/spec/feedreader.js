@@ -6,7 +6,7 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-        // feed has a defined url and is not empty    
+        // check feed has a defined url and is not empty    
         it('each feed has a URL defined and the URL is not empty', function(){              
             function checkForUrl(element) {
                 expect(element.url).toBeDefined();
@@ -15,7 +15,7 @@ $(function() {
             allFeeds.forEach(checkForUrl);
         });
 
-        // feed has a defined name and is not empty
+        // check feed has a defined name and is not empty
         it('each feed has a name defined and the name is not empty', function(){              
             function checkForName(element) {
                 expect(element.name).toBeDefined();
