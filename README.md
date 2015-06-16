@@ -1,4 +1,5 @@
-Coding changes made due to Udacity Reviewer Comments
+More Coding changes made due to Udacity Reviewer Comment. 6/16
+Coding changes made due to Udacity Reviewer Comments 6/15
 
 Things that needed to be done to accomplish P6
 
