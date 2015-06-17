@@ -31,9 +31,9 @@ $(function() {
 
         // prove if menu element is hidden by default
         it('Menu element is hidden by default', function(){
-            // Changes due to Udacity Review
+        // Changes due to Udacity Review
             expect($('body').hasClass('menu-hidden')).toBe(true);
-    });
+        });
 
         // change menu visibility on/off when clicked
         it("Menu changes visibility", function() {
@@ -48,13 +48,13 @@ $(function() {
     /* test suite "Initial Entries" */
     describe("Initial Entries", function() {
         // Load feeds beforehand with timeout to be able to run tests
-            beforeEach(function(done) {
+        beforeEach(function(done) {
             $('.feed').empty(); //suggested by Udacity reviewr
             loadFeed(0, done);
         });
 
         // Ensure that at least one element is shown
-        it("Ensure .entry is shown", function(done) {
+        it("Ensure .entry is shown", function() {
             var entries = document.querySelectorAll('.entry');
             expect(entries.length).toBeGreaterThan(0);
         });
@@ -62,21 +62,23 @@ $(function() {
 
     /* test suite "New Feed Selection" */
     describe("New Feed Selection", function() {
+        var oldContent;
+        var newContent;
 
-        // Simulate refresh.  Changes suggested by Udacity Reviewer  
+        // Simulate refresh.  Changes suggested by Udacity Reviewer
         beforeEach(function(done) {
             $('.feed').empty();
             loadFeed(3, function() {
-                var oldContent = $('.feed').html();
+                oldContent = $('.feed').html();
                 loadFeed(1, function(){
-                var newContent = $('.feed').html();
+                newContent = $('.feed').html();
                 done();
                 });
             });
         });
 
-        it("new loadFeed changes content", function(done) {
-                expect(oldContent).not.toEqual(newContent);
+        it("new loadFeed changes content", function() {
+            expect(oldContent).not.toEqual(newContent);
         });
     });
 }());
